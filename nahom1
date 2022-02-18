@@ -1,0 +1,139 @@
+
+  <variables>
+    <variable id="nkqvvYkE*%ZZo$SI+H`5">NahomCalc</variable>
+    <variable id="wj7n%we%lQB+O:g07ZSv">X</variable>
+    <variable id="eTAQUv/Ta.:Qt$NL83ar">Y</variable>
+    <variable id="6ddmC1EF!1RG8+HEN+1-">Result</variable>
+  </variables>
+  <block type="text_print" id="E|2N+2vS`M-iU=,k?Qai" x="113" y="38">
+    <value name="TEXT">
+      <shadow type="text" id="!$XaQ%,;IyDlJdL%|_3!">
+        <field name="TEXT">Nahom CALCULATOR</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="variables_set" id="j9I?QZA-XB!YN]ZD{I9I">
+        <field name="VAR" id="nkqvvYkE*%ZZo$SI+H`5">NahomCalc</field>
+        <value name="VALUE">
+          <block type="lists_create_with" id="E%_a.gqmT_v[rRgz^:$+">
+            <mutation items="0"></mutation>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="x8xF+Smg[ANLLOYNGXoc">
+            <field name="VAR" id="wj7n%we%lQB+O:g07ZSv">X</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id=";`66H$2a@ZhLLQV{lbET">
+                <mutation type="TEXT"></mutation>
+                <field name="TYPE">TEXT</field>
+                <value name="TEXT">
+                  <shadow type="text" id="RqL6{m9p(TwbA4GK#-Q*">
+                    <field name="TEXT">please enter X</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="3mCpd{;Qy)y:N|6_iFt)">
+                <field name="VAR" id="eTAQUv/Ta.:Qt$NL83ar">Y</field>
+                <value name="VALUE">
+                  <block type="text_prompt_ext" id="2S5+1*W0r,YI:1mhd]l^">
+                    <mutation type="TEXT"></mutation>
+                    <field name="TYPE">TEXT</field>
+                    <value name="TEXT">
+                      <shadow type="text" id="]R1LuvBbkY*DpB*[StdI">
+                        <field name="TEXT">Please enter Y</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="lists_setIndex" id="m/3)z@PasGQbX`0+5:?x">
+                    <mutation at="true"></mutation>
+                    <field name="MODE">SET</field>
+                    <field name="WHERE">FROM_START</field>
+                    <value name="LIST">
+                      <block type="variables_get" id="ABwaz$#gpl-Z[L+VC=?,">
+                        <field name="VAR" id="nkqvvYkE*%ZZo$SI+H`5">NahomCalc</field>
+                      </block>
+                    </value>
+                    <value name="AT">
+                      <block type="variables_get" id="c7Msv;=$SYBP,VrEhp3m">
+                        <field name="VAR" id="wj7n%we%lQB+O:g07ZSv">X</field>
+                      </block>
+                    </value>
+                    <value name="TO">
+                      <block type="variables_get" id="%oFLNG;;S-MIbwidj@Rl">
+                        <field name="VAR" id="wj7n%we%lQB+O:g07ZSv">X</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="lists_setIndex" id="8wH^fuq/i3;$JO/.nU3q">
+                        <mutation at="true"></mutation>
+                        <field name="MODE">SET</field>
+                        <field name="WHERE">FROM_START</field>
+                        <value name="LIST">
+                          <block type="variables_get" id="``BlP;lb}.5wLG1e_Z3N">
+                            <field name="VAR" id="nkqvvYkE*%ZZo$SI+H`5">NahomCalc</field>
+                          </block>
+                        </value>
+                        <value name="AT">
+                          <block type="variables_get" id="D?bX(ZMbStCu78#h9tJX">
+                            <field name="VAR" id="eTAQUv/Ta.:Qt$NL83ar">Y</field>
+                          </block>
+                        </value>
+                        <value name="TO">
+                          <block type="variables_get" id="(r_c+)n%!VBhE`9si8K2">
+                            <field name="VAR" id="eTAQUv/Ta.:Qt$NL83ar">Y</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="!hN4%iCi5@LND{?3F(rq">
+                            <field name="VAR" id="6ddmC1EF!1RG8+HEN+1-">Result</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="N(V01=`Cb#R*RBSz4VTY">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="pkdQtL}8P2:_6V55eV)B">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="ukyAg_~4vJr:9;i%Olyi">
+                                    <field name="VAR" id="wj7n%we%lQB+O:g07ZSv">X</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="_-VV^[GC3n+i]2MQ2,eW">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="3FT+#3zR8.-T0mDj%OE9">
+                                    <field name="VAR" id="eTAQUv/Ta.:Qt$NL83ar">Y</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_print" id="a)UMWZ0ZIo{$T/BuD]GG">
+                                <value name="TEXT">
+                                  <shadow type="text" id="Nq@5s;%P57;[uJna,XsC">
+                                    <field name="TEXT">abc</field>
+                                  </shadow>
+                                  <block type="variables_get" id="V}F*jYcY%UX=gj?9HIw@">
+                                    <field name="VAR" id="6ddmC1EF!1RG8+HEN+1-">Result</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
